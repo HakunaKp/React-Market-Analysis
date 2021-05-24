@@ -1,0 +1,7 @@
+API_KEY = "YOUR ALPACA API KEY"
+SECRET_KEY = "YOUR ALPACA SECRET KEY"
+HEADERS = {
+    'APCA-API-KEY-ID': API_KEY,
+    'APCA-API-SECRET-KEY': SECRET_KEY
+}
+BARS_URL = 'https://data.alpaca.markets/v1/bars'
