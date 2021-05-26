@@ -1,0 +1,2 @@
+Date, Open, High, Low, Close, Volume, Open Interest
+2021-05-25 23:00:00, 251.28, 252.94, 250.875, 251.2053, 5655578, 0.0

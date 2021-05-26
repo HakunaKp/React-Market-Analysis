@@ -2,7 +2,9 @@ import React from 'react';
 import Select from 'react-select';
 import getSymbols from '../alpaca/data/symbols';
 import { Bar } from 'react-chartjs-2';
-import { date_vals, open_vals, high_vals, low_vals, close_vals } from './components/mapTaData'
+import { date_vals, open_vals, high_vals, low_vals, close_vals } from './components/MapTaData'
+import interval_options from './components/IntervalOptions'
+import getOHLCData from './components/GetArrayData.js'
 
 const bar_options = {
   scales: {
@@ -16,32 +18,28 @@ const bar_options = {
   },
 };
 
-const getTaData = (stock, ta_array) => {
-  return ta_array[ta_array.indexOf(stock) + 1]
-}
-
-const getGraphData = (stock) => {
+const getGraphData = (stock, interval) => {
   return {
-    labels: getTaData(stock, date_vals),
+    labels: getOHLCData(stock, date_vals, interval),
     datasets: [
       {
         label: 'Open',
-        data: getTaData(stock, open_vals),
+        data: getOHLCData(stock, open_vals, interval),
         backgroundColor: 'rgb(255, 99, 132)',
       },
       {
         label: 'High',
-        data: getTaData(stock, high_vals),
+        data: getOHLCData(stock, high_vals, interval),
         backgroundColor: 'rgb(54, 162, 235)',
       },
       {
         label: 'Low',
-        data: getTaData(stock, low_vals),
+        data: getOHLCData(stock, low_vals, interval),
         backgroundColor: 'rgb(75, 192, 192)',
       },
       {
         label: 'Close',
-        data: getTaData(stock, close_vals),
+        data: getOHLCData(stock, close_vals, interval),
         backgroundColor: 'rgb(54, 162, 235)',
       },
     ],
@@ -50,27 +48,39 @@ const getGraphData = (stock) => {
 
 export default class GroupedBar extends React.Component {
   state = {
-      selectedOption: { value: "AAPL", label: "AAPL - Apple Inc." },
-  };
-  handleChange = (selectedOption) => {
-      this.setState({ selectedOption }, () =>
-          selectedOption = this.state.selectedOption.value,
+      selectedStock: { value: "AAPL", label: "AAPL - Apple Inc." },
+      selectedInterval: { value: "15Min_26", label: "15 Minute Intervals - 1 Day Period" }
+    };
+    handleChangeStock = (selectedStock) => {
+        this.setState({ selectedStock }, () =>
+            selectedStock = this.state.selectedStock.value,
+        );
+    };
+    handleChangeInterval = (selectedInterval) => {
+      this.setState({ selectedInterval }, () =>
+          selectedInterval = this.state.selectedInterval.value,
       );
-  };
+    };
   render() {
-      const { selectedOption } = this.state;
+      const { selectedStock, selectedInterval } = this.state;
 
       return (
           <div className='header'>
               <h1 className='title'>Grouped OHLC Bar Chart</h1>
               <br></br>
               <Select
-              value={selectedOption}
-              onChange={this.handleChange}
+              value={selectedStock}
+              onChange={this.handleChangeStock}
               options={getSymbols()}
               />
               <br></br>
-              <Bar data={getGraphData(selectedOption.value)} options={bar_options} />
+              <Select
+              value={selectedInterval}
+              onChange={this.handleChangeInterval}
+              options={interval_options}
+              />
+              <br></br>
+              <Bar data={getGraphData(selectedStock.value, selectedInterval.value)} options={bar_options} />
           </div>
       );
   }

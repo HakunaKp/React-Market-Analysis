@@ -1,0 +1,2 @@
+Date, Open, High, Low, Close, Volume, Open Interest
+2021-05-25, o-166.8, h-167.37, l-164.94, c-165.55, v-142978, oi-0.0
