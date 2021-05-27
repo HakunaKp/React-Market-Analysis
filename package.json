@@ -38,7 +38,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "lodash": "^4.17.19",
+    "react-bootstrap": "^1.6.0",
     "react-select": "^4.3.1"
   },
   "peerDependencies": {

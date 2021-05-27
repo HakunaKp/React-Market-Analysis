@@ -5,6 +5,7 @@ import { Line } from 'react-chartjs-2';
 import { date_vals, sma_vals, rsi_vals } from './components/MapTaData'
 import interval_options from './components/IntervalOptions'
 import getTaData from './components/GetArrayData'
+import Button from './components/Button'
 
 const line_options = {
   scales: {
@@ -71,6 +72,7 @@ export default class MultiAxisLine extends React.Component {
         return (
             <div className='header'>
                 <h1 className='title'>Simple Moving Average + Relative Strength Index</h1>
+                <Button/>
                 <br></br>
                 <Select
                 value={selectedStock}

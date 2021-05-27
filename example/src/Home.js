@@ -8,18 +8,21 @@ const Home = () => (
       <h2 className='subtitle'>OHLC & Technical Indicators - Visualized</h2>
       <div className='links'>
         <a
+          className='btn btn-gh'
+          href='https://github.com/HakunaKp/'
+        >
+          GitHub
+        </a>
+        <a
           className='btn btn-npm'
-          href='https://github.com/HakunaKp/Stock-Analysis-Algotrading-Bot'
+          href='https://alpaca.markets/'
         >
           Alpaca
         </a>
-        <a
-          className='btn btn-gh'
-          href='https://github.com/reactchartjs/react-chartjs-2'
+        <a 
+          className='btn btn-chartjs' 
+          href='https://www.chartjs.org'
         >
-          Project
-        </a>
-        <a className='btn btn-chartjs' href='https://www.chartjs.org'>
           Chart.js
         </a>
       </div>
@@ -35,35 +38,16 @@ const Home = () => (
         </ul>
       </div>
       <div className='category'>
-        <h3 className='title'>Technical Indicator Charts</h3>
+        <h3 className='title'>Technical Indicators</h3>
         <ul className='items'>
           <li className='entry'>
-            <Link to='/multi-axis-line'>Grouped SMA + RSI Line Chart</Link>
+            <Link to='/multi-axis-line'>Grouped SMA & RSI</Link>
+          </li>
+          <li className='entry'>
+            <Link to='/multi'>Grouped OHLC Bars, SMA & RSI</Link>
           </li>
         </ul>
       </div>
-      {/*<div className='category'>
-        <h3 className='title'>Advanced Charts</h3>
-        <ul className='items'>
-          <li className='entry'>
-            <Link to='/dynamic-bar'>Dynamic</Link>
-          </li>
-          <li className='entry'>
-            <Link to='/multi'>Multi Type</Link>
-          </li>
-          <li className='entry'>
-            <Link to='/crazy'>Crazy</Link>
-          </li>
-        </ul>
-      </div>*/}
-      {/*<div className='category'>
-        <h3 className='title'>Events</h3>
-        <ul className='items'>
-          <li className='entry'>
-            <Link to='/click-events'>Click Events</Link>
-          </li>
-        </ul>
-      </div>*/}
     </div>
     <hr />
     <div className='footer'>

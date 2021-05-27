@@ -1,4 +1,4 @@
-const interval_options = [
+const getIntervals = [
     { value: "1Min_390", label: "1 Minute Intervals - 1 Day Period" },
     { value: "1Min_1000", label: "1 Minute Intervals - 2.5 Day Period" },
     { value: "5Min_78", label: "5 Minute Intervals - 1 Day Period" },
@@ -16,4 +16,4 @@ const interval_options = [
     { value: "day_756", label: "1 Day Intervals - 3 Year Period" },
 ]
 
-export default interval_options
+export default getIntervals

@@ -1,7 +1,7 @@
 ﻿# React-Market-Analysis
 
 ### This app is a work in progress
-Current Demo: https://hopeful-mcclintock-2cb11c.netlify.app/#/
+Current Demo: https://nasdaq-analysis.netlify.app/#/
 
 ### Instructions to Run the App
 - navigate to empty directory
