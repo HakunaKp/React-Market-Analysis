@@ -1,7 +1,7 @@
 ﻿# React-Market-Analysis
 
-Demo: https://nasdaq-analysis.netlify.app/#/
-Blog posts about this app: https://kunal-patil.ghost.io/tag/algotrading/
+- Demo: https://nasdaq-analysis.netlify.app/#/
+- Blog posts about this app: https://kunal-patil.ghost.io/tag/algotrading/
 
 ### How to Run
 - navigate to empty directory
