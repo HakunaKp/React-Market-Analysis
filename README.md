@@ -1,9 +1,9 @@
 ﻿# React-Market-Analysis
 
-### This app is a work in progress
-Current Demo: https://nasdaq-analysis.netlify.app/#/
+Demo: https://nasdaq-analysis.netlify.app/#/
+Blog posts about this app: https://kunal-patil.ghost.io/tag/algotrading/
 
-### Instructions to Run the App
+### How to Run
 - navigate to empty directory
 - git clone https://github.com/HakunaKp/React-Market-Analysis.git
 - npm install
