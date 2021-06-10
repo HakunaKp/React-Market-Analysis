@@ -8,6 +8,7 @@ import Home from './Home'
 import GroupedBar from './charts/GroupedBar'
 import MultiAxisLine from './charts/MultiAxisLine'
 import MultiType from './charts/MultiType'
+import Momentum from './charts/Momentum'
 
 const App = () => (
   <Router>
@@ -17,6 +18,7 @@ const App = () => (
         <Route exact path='/grouped-bar' component={GroupedBar} />
         <Route exact path='/multi-axis-line' component={MultiAxisLine} />
         <Route exact path='/multi' component={MultiType} />
+        <Route exact path='/momentum' component={Momentum} />
       </Switch>
     </div>
   </Router>

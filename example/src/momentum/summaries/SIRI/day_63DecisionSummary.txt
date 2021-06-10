@@ -1,0 +1,7 @@
+Beginning Cash Balance = $100,000.00
+Ending Cash Balance = $99,988.89
+Ending Holding Balance = $11.91
+Ending Total Assets =  $100,000.80
+Ending Total Profit =  $0.80
+Ending Percent Change =  +0.00%
+Period: 2021-02-25 23:00:00 - 2021-05-20 23:00:00

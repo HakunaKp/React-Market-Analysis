@@ -48,6 +48,14 @@ const Home = () => (
           </li>
         </ul>
       </div>
+      <div className='category'>
+        <h3 className='title'>Trading Strategies</h3>
+        <ul className='items'>
+          <li className='entry'>
+            <Link to='/momentum'>Momentum</Link>
+          </li>
+        </ul>
+      </div>
     </div>
     <hr />
     <div className='footer'>
